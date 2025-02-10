@@ -84,7 +84,7 @@ const Header = () => {
 
             <SignedOut>
               <SignInButton>
-                <Button variant="Outline">Sign In</Button>
+                <Button variant="outline">Sign In</Button>
               </SignInButton>
             </SignedOut>
             <SignedIn>
