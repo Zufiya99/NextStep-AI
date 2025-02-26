@@ -26,11 +26,13 @@ import {
   PenBox,
   StarsIcon,
 } from "lucide-react";
+import { checkUser } from "@/lib/checkUser";
 
-const Header = () => {
+const Header = async () => {
+  await checkUser();
   return (
     <>
-      <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
+      <header className="w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
         <nav className="container mx-auto px-4 flex items-center justify-between">
           <Link href="/">
             <Image
@@ -53,14 +55,14 @@ const Header = () => {
                   <Button>
                     <StarsIcon className="h-4 w-4" />
                     <span className="hidden md:block">Growth Tools</span>
-                    <ChevronDown className="h-4 w-4"/>
+                    <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>
                     <Link href="/resume" className="flex items-center gap-2">
                       <FileText className="h-4 w-4" />
-                      <span className="hidden md:block">Build resume</span>
+                      <span className="md:block">Build resume</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
@@ -69,13 +71,13 @@ const Header = () => {
                       className="flex items-center gap-2"
                     >
                       <PenBox className="h-4 w-4" />
-                      <span className="hidden md:block">Cover letter</span>
+                      <span className="md:block">Cover letter</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <Link href="/interview" className="flex items-center gap-2">
                       <GraduationCap className="h-4 w-4" />
-                      <span className="hidden md:block">Interview prep</span>
+                      <span className="md:block">Interview prep</span>
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
