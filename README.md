@@ -1,6 +1,6 @@
 # NextStep AI - Your AI-Powered Career Coach 🚀
 
-![NextStep AI Banner](public/banner.png)
+![NextStep AI Banner](public/NextStepAI_banner.png)
 
 NextStep AI is a cutting-edge career development platform that leverages artificial intelligence to provide personalized career guidance, skill development recommendations, and professional growth opportunities.
 
