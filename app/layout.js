@@ -11,6 +11,7 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import { dark } from '@clerk/themes'
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,8 +41,10 @@ export default function RootLayout({ children }) {
             {/* Main Content */}
             <main className="min-h-screen">{children}</main>
 
+            <Toaster richColors/>
+
             {/* Footer */}
-            <footer className="bg-gray-800 text-gray-200 py-12">
+            <footer className="bg-gray-800 text-gray-200 py-5">
               <div className="container mx-auto px-6 text-center">
                 <p className="text-sm">
                   &copy; {new Date().getFullYear()}{" "}

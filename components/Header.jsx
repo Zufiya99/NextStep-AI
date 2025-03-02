@@ -39,7 +39,7 @@ const Header = async () => {
               src={"/NextStepAI_logo.png"}
               alt="logo"
               width={200}
-              height={60}
+              height={100}
             />
           </Link>
           <div className="flex items-center space-x-2 md:space-x-4">
