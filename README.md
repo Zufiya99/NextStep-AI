@@ -154,7 +154,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 🎥 Project Tutorial
 
-This project was built referring the tutorial by [RoadsideCoder]([https://youtu.be/UbXpRv5ApKA?si=uvIJETPupwPig0RJ](https://youtu.be/UbXpRv5ApKA?si=9oGuJXKaBOToGe7N)).
+This project was built referring the tutorial by [RoadsideCoder](https://youtu.be/UbXpRv5ApKA?si=9oGuJXKaBOToGe7N).
 
 ## 🔮 Future Roadmap
 
