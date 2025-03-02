@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextStep AI - Your AI-Powered Career Coach 🚀
 
-## Getting Started
+![NextStep AI Banner](public/banner.png)
 
-First, run the development server:
+NextStep AI is a cutting-edge career development platform that leverages artificial intelligence to provide personalized career guidance, skill development recommendations, and professional growth opportunities.
 
+## 🌟 Features
+
+### Implemented Features
+
+#### 🔐 Authentication & User Management
+- Secure authentication using Clerk
+- Custom login and signup pages
+- User profile management
+- Personalized onboarding experience
+
+#### 💼 Professional Profile
+- Industry and specialization selection
+- Skills assessment
+- Experience tracking
+- Professional bio creation
+
+#### 🎨 Modern UI/UX
+- Responsive design using Tailwind CSS
+- Dark/Light theme support
+- Glass-morphism effects
+- Shadcn UI components
+- Interactive animations
+
+### Upcoming Features
+
+#### 🤖 AI-Driven Career Insights
+- Personalized industry analysis
+- Skill gap identification
+- Career trajectory predictions
+- Weekly insights using Gemini AI
+- Automated career recommendations
+
+#### 🎯 Mock Interviews
+- AI-generated interview questions
+- Industry-specific scenarios
+- Real-time feedback
+- Performance analytics
+- Interview preparation tips
+
+#### 📝 Resume Builder
+- AI-powered resume optimization
+- Multiple template options
+- ATS-friendly formatting
+- PDF export functionality
+- Version control
+
+#### ✍️ Cover Letter Generator
+- Customized cover letter creation
+- Industry-specific templates
+- AI-powered content suggestions
+- Professional formatting
+
+#### 📊 Career Dashboard
+- Progress tracking
+- Skill development metrics
+- Interview performance stats
+- Career goal monitoring
+- Personalized action items
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React 19
+- Next.js 15
+- Tailwind CSS
+- Shadcn UI
+- Framer Motion
+
+### Backend
+- Next.js API Routes
+- Prisma ORM
+- NeonDB (PostgreSQL)
+- Inngest (Background Jobs)
+
+### AI/ML
+- Google Gemini API
+- Natural Language Processing
+- Machine Learning Models
+
+### Authentication
+- Clerk Authentication
+- JWT Tokens
+- Role-based access control
+
+### DevOps
+- Vercel Deployment
+- GitHub Actions
+- Continuous Integration
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/nextstep-ai.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+cd nextstep-ai
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+# Add your API keys and configuration
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+## 🔑 Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env.local` file with the following variables:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+DATABASE_URL=your_neon_db_url
+GEMINI_API_KEY=your_gemini_api_key
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🗄️ Database Schema
 
-## Deploy on Vercel
+The application uses a PostgreSQL database with the following main models:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Users
+- Industries
+- Skills
+- Interviews
+- Resumes
+- CareerInsights
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+
+The application is deployed on Vercel:
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Configure environment variables
+4. Deploy!
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🎥 Project Tutorial
+
+This project was built following the tutorial by [JavaScript Mastery](https://youtu.be/UbXpRv5ApKA?si=uvIJETPupwPig0RJ).
+
+## 🔮 Future Roadmap
+
+- [ ] AI-powered skill recommendations
+- [ ] Integration with job boards
+- [ ] Peer networking features
+- [ ] Mobile application
+- [ ] Chrome extension for job applications
+- [ ] Interview recording and analysis
+- [ ] Mentor matching system
+
+## 👨‍💻 Developer
+
+Developed by [Zufiya Idrisi](https://www.linkedin.com/in/zufiyaidrisi9797/)
+
+---
+
+*Note: This project is currently under active development. Some features mentioned are planned for future implementation.*
