@@ -152,13 +152,9 @@ The application is deployed on Vercel:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🎥 Project Tutorial
 
-This project was built following the tutorial by [JavaScript Mastery](https://youtu.be/UbXpRv5ApKA?si=uvIJETPupwPig0RJ).
+This project was built referring the tutorial by [RoadsideCoder]([https://youtu.be/UbXpRv5ApKA?si=uvIJETPupwPig0RJ](https://youtu.be/UbXpRv5ApKA?si=9oGuJXKaBOToGe7N)).
 
 ## 🔮 Future Roadmap
 
