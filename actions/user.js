@@ -3,8 +3,8 @@
 "use server";
 
 // import { marketOutlook } from "@prisma/client";
-import { auth } from "@clerk/nextjs/server"; // ✅ Import auth function
-import { db } from "../lib/prisma"; // ✅ Ensure db is imported
+import { auth } from "@clerk/nextjs/server";  
+import { db } from "../lib/prisma"; 
 // import { err } from "inngest/types";
 
 export async function updateUser(data) {
@@ -96,7 +96,7 @@ export async function getUserOnboardingStatus() {
       isOnboarded: !!user?.industry,
     };
   } catch (error) {
-    console.error("Error checking onboarding status ", error.message);
-    throw new Error("Failed to check onboarding status");
+    console.error("Error checking onboarding status:", error.message);
+    throw new Error(`Failed to check onboarding status: ${error.message}`);
   }
 }

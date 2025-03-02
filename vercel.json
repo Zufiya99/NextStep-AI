@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "buildCommand": "prisma generate && prisma migrate deploy && next build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "functions": {
+    "app/api/*": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "NEXTJS_IGNORE_ESLINT": "1",
+    "NEXTJS_IGNORE_TYPECHECK": "1"
+  },
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "development": false,
+      "production": true
+    }
+  },
+  "crons": [{
+    "path": "/api/cron/update-industry",
+    "schedule": "0 0 * * *"
+  }]
+} 

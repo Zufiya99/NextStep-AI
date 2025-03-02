@@ -98,12 +98,12 @@ body {
   background: radial-gradient(circle, transparent, rgb(0, 0, 0, 0.9));
 }
 
-@layer utilities{
-  .gradient{
+@layer utilities {
+  .gradient {
     @apply bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600;
   }
 
-  .gradient-title{
+  .gradient-title {
     @apply gradient font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2;
   }
 }
@@ -112,11 +112,93 @@ body {
   perspective: 1000px;
 }
 
-.hero-image{
+.hero-image {
   transform: rotateX(15deg) scale(1);
   transition: transform 0.5s ease-out;
   will-change: transform;
 }
-.hero-image.scrolled{
+.hero-image.scrolled {
   transform: rotateX(0deg) scale(1) translateY(40px);
+}
+
+/* Hero Section Styles */
+.gradient-title {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/80 to-primary;
+  animation: shimmer 8s linear infinite;
+  background-size: 200% 100%;
+}
+
+.text-shrink {
+  transform: scale(0.95);
+  transition: transform 0.3s ease-out;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.hero-image {
+  transform: translateY(0);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-image.scrolled {
+  transform: translateY(-20px);
+}
+
+.hero-image img {
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-image:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Effects */
+.group:hover .group-hover\:translate-x-1 {
+  transform: translateX(4px);
+}
+
+/* Gradient Background */
+.gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-foreground) 100%
+  );
+}
+
+/* Form Enhancements */
+.form-card-shadow {
+  box-shadow: 0 0 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Input Focus Effects */
+.input-focus-ring {
+  @apply focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+/* Gradient Backgrounds */
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-foreground) 100%
+  );
+}
+
+/* Animation Classes */
+.hover-scale {
+  @apply transition-transform duration-200 hover:scale-[1.02];
+}
+
+/* Card Backdrop */
+.card-backdrop {
+  @apply bg-background/80 backdrop-blur-sm border-2 border-primary/10;
 }
