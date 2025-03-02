@@ -8,9 +8,7 @@ import { db } from "../lib/prisma"; // ✅ Ensure db is imported
 // import { err } from "inngest/types";
 
 export async function updateUser(data) {
-  console.log("Hello:");
   const { userId } = await auth();
-  console.log("User ID:", userId);
   if (!userId) throw new Error("Unauthorized");
 
   const user = await db.user.findUnique({
@@ -18,12 +16,6 @@ export async function updateUser(data) {
       clerkUserId: userId,
     },
   });
-  console.log(db.user.id);
-
-//   const user = await db?.user?.findUnique({
-//   where: { clerkUserId: userId },
-// });
-
   if (!user) throw new Error("User not found");
 
   try {
@@ -32,23 +24,24 @@ export async function updateUser(data) {
       // Ensures atomicity, meaning either all operations succeed or none
       async (tx) => {
         // 1. Find if the industry exists
-        let industryInsights = await tx.industryInsights.findUnique({
+        let industryInsights = await tx.industryInsight.findUnique({
           where: {
             industry: data.industry,
           },
         });
+
         // 2. If industry doesn't exists, create it with default values - will replace it with AI later
         if (!industryInsights) {
-          industryInsights = await tx.industryInsights.create({
+          industryInsights = await tx.industryInsight.create({
             data: {
               industry: data.industry,
               salaryRanges: [],
-              growthRates: 0,
+              growthRate: 0,
               demandLevel: "Medium",
               topSkills: [],
               marketOutlook: "Neutral",
               keyTrends: [],
-              recommenededSkills: [],
+              recommendedSkills: [],
               nextUpdate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
             },
           });
@@ -60,7 +53,7 @@ export async function updateUser(data) {
           },
           data: {
             industry: data.industry,
-            experience: data.experience,
+            experience: parseInt(data.experience),
             bio: data.bio,
             skills: data.skills,
           },
@@ -107,24 +100,3 @@ export async function getUserOnboardingStatus() {
     throw new Error("Failed to check onboarding status");
   }
 }
-// export async function getUserOnboardingStatus() {
-//   const { userId } = await auth();
-//   if (!userId) throw new Error("Unauthorized");
-
-//   const user = await db.user.findUnique({
-//     where: {
-//       clerkUserId: userId,
-//     },
-//     select: {
-//       industry: true,
-//     },
-//   });
-
-//   if (!user) throw new Error("User not found");
-
-//   return {
-//     isOnboarded: Boolean(user.industry), // Fix the logic
-//   };
-// }
-
-

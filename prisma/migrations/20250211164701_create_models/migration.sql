@@ -70,7 +70,7 @@ CREATE TABLE "IndustryInsight" (
     "topSkills" TEXT[],
     "marketOutlook" "marketOutlook" NOT NULL,
     "keyTrends" TEXT[],
-    "recommenededSkills" TEXT[],
+    "recommendedSkills" TEXT[],
     "lastUpdate" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "nextUpdate" TIMESTAMP(3) NOT NULL,
 
